@@ -7,7 +7,8 @@
     <div class="p-16">
       <div class="mb-16">
         <a href="javascript:void(0)" class="d-flex align-items-center">
-          <img src="assets/images/favicon.svg" alt=""> <span class="ms-16 fw-medium fs-26">Flexy</span>
+          <img src="..\assets\images\favicon.png" class="img-responsive" alt="">
+          <span class="ms-16 fw-medium fs-26">Warehouse</span>
         </a>
 
       </div>
@@ -50,7 +51,7 @@
 
     <!-- Header -->
     <div class="containet">
-     <div class="bg-white" style="border-radius: 20px; margin:0px 30px 0px 30px;">
+     <div class="bg-white" style="border-radius: 20px; margin:5px 30px 0px 30px;box-shadow: 20px 20px 50px 10px pink inset">
     <mat-toolbar class="header ps-24 pe-24">
       <button type="button" class="ms-4" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
         *ngIf="isHandset$ | async">
@@ -94,9 +95,10 @@
       </div>
     </div>
 
-    <p class="text-center pb-24 fs-16">© 2024 All rights reserved by <a
-        href="https://www.wrappixel.com/templates/category/free-angular-templates/" target="_blank"
-        class="text-indigo">Wrappixel.com</a></p>
+    <div class="text-end pb-5 p-3 border-top border-white">
+      ©About  
+      
+    </div>
 
   </mat-sidenav-content>
 
