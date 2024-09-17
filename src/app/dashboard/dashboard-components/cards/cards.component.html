@@ -1,5 +1,52 @@
 <!-- Cards -->
 <div class="row">
+  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
+    <div class="card bg-primary-light">
+      <div class="card-body">
+        <h2 class="text-muted">Incoming order</h2>
+        <div class="metric-value d-inline-block">
+          <h1 class="mb-1">5</h1>
+        </div>
+        <div class="metric-label d-inline-block float-right text-success font-weight-bold">
+          <span>NEW</span>
+        </div>
+      </div>
+      <span class="text-muted text-md-right mr-3">Update on 12 SEP 2024</span>
+    </div>
+  </div>
+  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
+    <div class="card bg-success-light">
+      <div class="card-body">
+        <h2 class="text-muted">Production Order</h2>
+        <div class="metric-value d-inline-block">
+          <h1 class="mb-1">2</h1>
+        </div>
+        <div class="metric-label d-inline-block float-right text-success font-weight-bold">
+          <span>NEW</span>
+        </div>
+      </div>
+      <span class="text-muted text-md-right mr-3">Update on 12 SEP 2024</span>
+    </div>
+  </div>
+  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
+    <div class="card bg-danger-light">
+      <div class="card-body">
+        <h2 class="text-muted">Waiting Order</h2>
+        <div class="metric-value d-inline-block">
+          <h1 class="mb-1">2</h1>
+        </div>
+        <div class="metric-label d-inline-block float-right text-danger font-weight-bold">
+          <span>Waiting</span>
+        </div>
+      </div>
+      <span class="text-muted text-md-right mr-3">Update on 12 SEP 2024</span>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="row">
   <div class="col-lg-4" *ngFor="let card of cards">
     <mat-card class="overflow-hidden">
       <!-- <div>
