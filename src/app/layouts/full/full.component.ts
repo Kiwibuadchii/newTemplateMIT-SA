@@ -35,6 +35,21 @@ export class FullComponent {
       menu: "Dashboard",
     },
     {
+      link: "/orderlist",
+      icon: "home",
+      menu: "order",
+    },
+    {
+      link: "/orderconfirm",
+      icon: "home",
+      menu: "confirm order",
+    },
+    {
+      link: "/taglist",
+      icon: "home",
+      menu: "tag list",
+    },
+    {
       link: "/button",
       icon: "disc",
       menu: "Buttons",

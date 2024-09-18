@@ -1,0 +1,36 @@
+<h2 mat-dialog-title> {{data.name}}</h2>
+<mat-dialog-content style="padding-top: 15px;">
+    
+    <form [formGroup]="formTagRecieve" >
+                    
+              
+        <mat-form-field class="w-100 fs-16" appearance="outline">
+          <mat-label>ความยาวต่อม้วน</mat-label>
+          <input matInput  placeholder="Enter your User Id" type="number" formControlName="qty_per_tag" >
+        </mat-form-field>
+        <mat-form-field class="w-100 fs-16" appearance="outline">
+          <mat-label>รหัสสินค้า</mat-label>
+          <input matInput  placeholder="Enter your User Id"  formControlName="prod_code" >
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>สถานที่เก็บ</mat-label>
+            <mat-select formControlName="location_id"   required>
+              <mat-option>--</mat-option>
+              @for (tag of locations; track tag) {
+                <mat-option [value]="tag.location_detail">{{tag.location_detail}}</mat-option>
+              }
+            </mat-select>
+            <!-- @if (animalControl.hasError('required')) {
+              <mat-error>Please choose an animal</mat-error>
+            } -->
+            <!-- <mat-hint>{{animalControl.value?.sound}}</mat-hint> -->
+          </mat-form-field>
+  
+
+  
+  
+      </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="submit()" cdkFocusInitial>รับของ</button>
+</mat-dialog-actions>

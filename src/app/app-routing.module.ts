@@ -18,6 +18,11 @@ import { TooltipsComponent } from './components/tooltips/tooltips.component';
 import { ProductComponent } from './dashboard/dashboard-components/product/product.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FullComponent } from './layouts/full/full.component';
+import { RecieveOrderComponent } from './recieve/recieve-order/recieve-order.component';
+import { AddRecieveOrderComponent } from './recieve/add-recieve-order/add-recieve-order.component';
+import { ConfirmRecieveComponent } from './recieve/confirm-recieve/confirm-recieve.component';
+import { ConfirmRecieveDetailsComponent } from './recieve/confirm-recieve/confirm-recieve-details/confirm-recieve-details.component';
+import { TaglistComponent } from './tagDetails/taglist/taglist.component';
 
 const routes: Routes = [
   {
@@ -42,6 +47,11 @@ const routes: Routes = [
       {path:"slide-toggle", component:SlideToggleComponent},
       {path:"tooltip", component:TooltipsComponent},
       {path:"button", component:ButtonsComponent},
+      {path:"orderlist", component:RecieveOrderComponent},
+      {path:"orderadd", component:AddRecieveOrderComponent},
+      {path:"orderconfirm", component:ConfirmRecieveComponent},
+      {path:"confirmdetails", component:ConfirmRecieveDetailsComponent},
+      {path:"taglist", component:TaglistComponent},
     ]
   },
 
