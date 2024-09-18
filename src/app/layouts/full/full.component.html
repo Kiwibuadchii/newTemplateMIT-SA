@@ -50,55 +50,56 @@
   <mat-sidenav-content>
 
     <!-- Header -->
-    <div class="containet">
-     <div class="bg-white" style="border-radius: 20px; margin:5px 30px 0px 30px;box-shadow: 20px 20px 50px 10px pink inset">
-    <mat-toolbar class="header ps-24 pe-24">
-      <button type="button" class="ms-4" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <i-feather name="menu" class="text-light-muted feather-base mt-n3"></i-feather>
-      </button>
-      <button mat-icon-button class="ms-4 me-4" (click)="search=!search">
-        <i-feather name="search" class="mt-n3 text-light-muted feather-base text-dark"></i-feather>
-      </button>
-      <div class="ms-auto">
-        <button mat-button class="fs-16 pt-4 pb-4 ps-8 pe-8 text-light-muted d-flex align-items-center" [matMenuTriggerFor]="menu">
-          <div class="d-flex align-items-center">
-            <img src="assets/images/OIP.jpg" class="rounded-circle img-responsive" style="width: 25px; height: 25px" alt="">
-            <span class="fw-light ms-8 text-secondary"></span>
-            <span class="fw-bold ms-8"><P>Sarayut Janngam</P></span>
-            <i-feather name="chevron-down" class="feather-base"></i-feather>
-          </div>
-        </button>
-        <mat-menu #menu="matMenu" class="profile-dropdown">
-          <div class="p-16 mb-4">
-            <button mat-menu-item class="fs-16">Edit Profile</button>
-            <button mat-menu-item class="fs-16">Account</button>
-            <button mat-menu-item class="fs-16">Change Password</button>
-            <button mat-menu-item class="fs-16">My Settings</button>
-          </div>
 
-          <hr>
-
-          <div class="p-16">
-            <button mat-flat-button color="accent" class="w-100 text-white">Logout</button>
-          </div>
-
-        </mat-menu>
-      </div>
-    </mat-toolbar>
-  </div>
-</div>
     <!-- Content -->
     <div class="body-wrapper">
+      <div class="containet">
+        <div class="bg-white" style="border-radius: 20px; margin:0px 0px 20px 0px;box-shadow: 20px 20px 50px 10px rgba(255, 192, 203, 0) inset">
+         <mat-toolbar class="header ps-24 pe-24">
+         <button type="button" class="ms-4" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+           *ngIf="isHandset$ | async">
+           <i-feather name="menu" class="text-light-muted feather-base mt-n3"></i-feather>
+         </button>
+         <button mat-icon-button class="ms-4 me-4" (click)="search=!search">
+           <i-feather name="search" class="mt-n3 text-light-muted feather-base text-dark"></i-feather>
+         </button>
+         <div class="ms-auto">
+           <button mat-button class="fs-16 pt-4 pb-4 ps-8 pe-8 text-light-muted d-flex align-items-center" [matMenuTriggerFor]="menu">
+             <div class="d-flex align-items-center">
+               <img src="assets/images/OIP.jpg" class="rounded-circle img-responsive" style="width: 25px; height: 25px" alt="">
+               <span class="fw-light ms-8 text-secondary"></span>
+               <span class=""><P>Sarayut Janngam</P></span>
+               <i-feather name="chevron-down" class="feather-base"></i-feather>
+             </div>
+           </button>
+           <mat-menu #menu="matMenu" class="profile-dropdown">
+             <div class="p-16 mb-4">
+               <button mat-menu-item class="fs-16">Edit Profile</button>
+               <button mat-menu-item class="fs-16">Account</button>
+               <button mat-menu-item class="fs-16">Change Password</button>
+               <button mat-menu-item class="fs-16">My Settings</button>
+             </div>
+   
+             <hr>
+   
+             <div class="p-16">
+               <button mat-flat-button color="accent" class="w-100 text-white">Logout</button>
+             </div>
+   
+           </mat-menu>
+         </div>
+       </mat-toolbar>
+     </div>
+   </div>
       <div class="page-wrapper">
         <router-outlet></router-outlet>
       </div>
     </div>
 
-    <div class="text-end pb-5 p-3 border-top border-white">
+    <!-- <div class="text-end pb-5 p-3 border-top border-white">
       ©About  
       
-    </div>
+    </div> -->
 
   </mat-sidenav-content>
 

@@ -1,8 +1,60 @@
 <!-- Daily Activity -->
+<link rel="stylesheet" href="activity.component.scss">
 <mat-card>
-  <mat-card-content>
-    <h4 class="mb-60">Daily Activity</h4>
-    <div class="d-flex" *ngFor="let activity of activity">
+  <mat-card-content class="row">
+    <h3 class="mb-30">Login Log</h3>
+    <table class="col-xl-3">
+      <thead class="bg-light">
+        <tr class="border-0">
+          <th class="border-0">Name</th>
+          <th class="border-0">Ip address</th>
+          <th class="border-0">Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Sarayut</td>
+          <td>127.0.0.1</td>
+          <td>14 SEP 2024</td>
+        </tr>
+        <tr>
+          <td>Pongpee</td>
+          <td>192.168.0.2</td>
+          <td>14 SEP 2024</td>
+        </tr>
+        <tr>
+          <td>Ansadang</td>
+          <td>192.168.0.3</td>
+          <td>14 SEP 2024</td>
+        </tr>
+        <tr>
+          <td>Pongpee</td>
+          <td>192.168.0.4</td>
+          <td>14 SEP 2024</td>
+        </tr>
+        <tr>
+          <td>Sarayut</td>
+          <td>127.0.0.1</td>
+          <td>12 SEP 2024</td>
+        </tr>
+        <tr>
+          <td>John doe</td>
+          <td>192.168.0.6</td>
+          <td>11 SEP 2024</td>
+        </tr>
+        
+    </tbody>
+    </table>
+    <div class="buttonlogin">
+      <button _ngcontent-ng-c3100956700="" mat-raised-button=""
+      class="me-8 mb-8 mdc-button mdc-button--raised mat-mdc-raised-button mat-unthemed mat-mdc-button-base"
+      mat-ripple-loader-uninitialized="" mat-ripple-loader-class-name="mat-mdc-button-ripple"><span
+        class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span
+        class="mdc-button__label">Details</span><span class="mat-mdc-focus-indicator"></span><span
+        class="mat-mdc-button-touch-target"></span></button>
+    </div>
+
+    <!-- <div class="d-flex" *ngFor="let activity of activity">
       <p class="fw-bold ps-16 pe-20 fs-12">{{ activity.time }}</p>
       <div class="activity-border">
         <div class="deep">
@@ -12,66 +64,6 @@
         </div>
         <p class="ps-20 pe-16 activity-message">{{ activity.message }}</p>
       </div>
-    </div>
+    </div> -->
   </mat-card-content>
 </mat-card>
-
-<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
-  <div class="card">
-    <h5 class="card-header text-light" style="background-color: rgba(113, 99, 186, 255);">Login log</h5>
-    <div class="card-body">
-      <div class="card-body p-0">
-        <div class="card-body p-0">
-          <div class="table-responsive">
-            <table class="table no-wrap p-table">
-              <thead class="bg-light">
-                <tr class="border-0">
-                  <th class="border-0">Name</th>
-                  <th class="border-0">Ip address</th>
-                  <th class="border-0">Date</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Sarayut</td>
-                  <td>127.0.0.1</td>
-                  <td>14 SEP 2024</td>
-                </tr>
-                <tr>
-                  <td>Pongpee</td>
-                  <td>192.168.0.2</td>
-                  <td>14 SEP 2024</td>
-                </tr>
-                <tr>
-                  <td>Ansadang</td>
-                  <td>192.168.0.3</td>
-                  <td>14 SEP 2024</td>
-                </tr>
-                <tr>
-                  <td>Pongpee</td>
-                  <td>192.168.0.4</td>
-                  <td>14 SEP 2024</td>
-                </tr>
-                <tr>
-                  <td>Sarayut</td>
-                  <td>127.0.0.1</td>
-                  <td>12 SEP 2024</td>
-                </tr>
-                <tr>
-                  <td>John doe</td>
-                  <td>192.168.0.6</td>
-                  <td>11 SEP 2024</td>
-                </tr>
-                <tr>
-                  <td colspan="3">
-                    <a href="#" class="btn btn-outline-light float-right">Details</a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
