@@ -7,7 +7,8 @@
     <div class="p-16">
       <div class="mb-16">
         <a href="javascript:void(0)" class="d-flex align-items-center">
-          <img src="assets/images/favicon.svg" alt=""> <span class="ms-16 fw-medium fs-26">Flexy</span>
+          <img src="..\assets\images\favicon.png" class="img-responsive" alt="">
+          <span class="ms-16 fw-medium fs-26">Warehouse</span>
         </a>
 
       </div>
@@ -24,7 +25,7 @@
         </ul>
       </div>
 
-      <div class="m-8 pt-4">
+      <!-- <div class="m-8 pt-4">
         <div class="buy-flexy ps-24 pe-24 mt-48 mb-48">
           <div class="text-center">
             <img src="assets/images/sidebar-buynow-bg.svg" class="img-fluid" alt="">
@@ -41,7 +42,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
 
   </mat-sidenav>
@@ -49,6 +50,8 @@
   <mat-sidenav-content>
 
     <!-- Header -->
+    <div class="containet">
+     <div class="bg-white" style="border-radius: 20px; margin:5px 30px 0px 30px;box-shadow: 20px 20px 50px 10px pink inset">
     <mat-toolbar class="header ps-24 pe-24">
       <button type="button" class="ms-4" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
         *ngIf="isHandset$ | async">
@@ -60,9 +63,9 @@
       <div class="ms-auto">
         <button mat-button class="fs-16 pt-4 pb-4 ps-8 pe-8 text-light-muted d-flex align-items-center" [matMenuTriggerFor]="menu">
           <div class="d-flex align-items-center">
-            <img src="assets/images/user2.webp" class="rounded-circle" alt="">
-            <span class="fw-light ms-8 text-secondary">Hi,</span>
-            <span class="fw-bold ms-8">Julia</span>
+            <img src="assets/images/OIP.jpg" class="rounded-circle img-responsive" style="width: 25px; height: 25px" alt="">
+            <span class="fw-light ms-8 text-secondary"></span>
+            <span class="fw-bold ms-8"><P>Sarayut Janngam</P></span>
             <i-feather name="chevron-down" class="feather-base"></i-feather>
           </div>
         </button>
@@ -83,7 +86,8 @@
         </mat-menu>
       </div>
     </mat-toolbar>
-
+  </div>
+</div>
     <!-- Content -->
     <div class="body-wrapper">
       <div class="page-wrapper">
@@ -91,9 +95,10 @@
       </div>
     </div>
 
-    <p class="text-center pb-24 fs-16">© 2024 All rights reserved by <a
-        href="https://www.wrappixel.com/templates/category/free-angular-templates/" target="_blank"
-        class="text-indigo">Wrappixel.com</a></p>
+    <div class="text-end pb-5 p-3 border-top border-white">
+      ©About  
+      
+    </div>
 
   </mat-sidenav-content>
 

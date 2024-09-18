@@ -7,9 +7,9 @@
       <table mat-table [dataSource]="dataSource" class="text-nowrap w-100">
 
         <!-- Id Column -->
-        <ng-container matColumnDef="id">
-          <th mat-header-cell *matHeaderCellDef> Id </th>
-          <td mat-cell class="fw-medium" *matCellDef="let element"> {{element.id}} </td>
+        <ng-container matColumnDef="Order_No">
+          <th mat-header-cell *matHeaderCellDef> Order_No </th>
+          <td mat-cell class="fw-medium" *matCellDef="let element"> {{element.Order_No}} </td>
         </ng-container>
 
         <!-- Assigned Column -->
@@ -51,3 +51,87 @@
     </div>
   </mat-card-content>
 </mat-card>
+
+<!-- <div class="row">
+  <!-- ============================================================== -->
+  <!-- recent orders  -->
+  <!-- ============================================================== -->
+  <!-- <div class="col-xl-8 col-lg-12 col-md-6 col-sm-12 col-12">
+    <div class="card">
+      <h5 class="card-header text-light" style="background-color: rgba(113, 99, 186, 255);">Recent Orders
+      </h5>
+      <div class="card-body p-0">
+        <div class="table-responsive">
+          <table class="table">
+            <thead class="bg-light">
+              <tr class="border-0">
+                <th class="border-0">Order No.</th>
+                <th class="border-0">Product Name</th>
+                <th class="border-0">Product Id</th>
+                <th class="border-0">Quantity</th>
+                <th class="border-0">Request date</th>
+                <th class="border-0">Deliver by</th>
+                <th class="border-0">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>RE0001</td>
+                <td>Product #1 </td>
+                <td>id000001 </td>
+                <td>20</td>
+                <td>27-9-2024 01:22:12</td>
+                <td>Patricia J. King</td>
+                <td><span class="badge-dot badge-brand mr-1"></span>Waiting
+                </td>
+              </tr>
+              <tr>
+                <td>RE0002</td>
+                <td>Product #2 </td>
+                <td>id000002 </td>
+                <td>12</td>
+                <td>25-08-2024 21:12:56</td>
+                <td>Rachel J. Wicker </td>
+                <td><span class="badge-dot badge-success mr-1"></span>Delivered
+                </td>
+              </tr>
+              <tr>
+                <td>RE0003</td>
+                <td>Product #3 </td>
+                <td>id000003 </td>
+                <td>23</td>
+                <td>24-08-2024 14:12:77</td>
+                <td>Michael K. Ledford </td>
+                <td><span class="badge-dot badge-success mr-1"></span>Delivered
+                </td>
+              </tr>
+              <tr>
+                <td>RE0004</td>
+                <td>Product #4 </td>
+                <td>id000004 </td>
+                <td>34</td>
+                <td>23-08-2024 09:12:35</td>
+                <td>Michael K. Ledford </td>
+                <td><span class="badge-dot badge-success mr-1"></span>Delivered
+                </td>
+              </tr>
+              <tr>
+                <td>RE0005</td>
+                <td>Product #5 </td>
+                <td>id000005 </td>
+                <td>5</td>
+                <td>23-08-2024 09:12:35</td>
+                <td>Michael K. Ledford </td>
+                <td><span class="badge-dot badge-success mr-1"></span>Delivered
+                </td>
+              </tr>
+              <tr>
+                <td colspan="9"><a href="#" class="btn btn-outline-light float-right">View
+                    More</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div> --> 
