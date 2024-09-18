@@ -50,6 +50,16 @@ export class FullComponent {
       menu: "tag list",
     },
     {
+      link: "/isuueorder",
+      icon: "home",
+      menu: "production order",
+    },
+    {
+      link: "/confirmissue",
+      icon: "home",
+      menu: "confirm production order",
+    },
+    {
       link: "/button",
       icon: "disc",
       menu: "Buttons",

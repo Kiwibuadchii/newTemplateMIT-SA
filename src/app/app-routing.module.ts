@@ -23,6 +23,9 @@ import { AddRecieveOrderComponent } from './recieve/add-recieve-order/add-reciev
 import { ConfirmRecieveComponent } from './recieve/confirm-recieve/confirm-recieve.component';
 import { ConfirmRecieveDetailsComponent } from './recieve/confirm-recieve/confirm-recieve-details/confirm-recieve-details.component';
 import { TaglistComponent } from './tagDetails/taglist/taglist.component';
+import { IssueOrderComponent } from './issue/issue-order/issue-order.component';
+import { AddissueComponent } from './issue/addissue/addissue.component';
+import { ConfirmIssueComponent } from './issue/confirm-issue/confirm-issue.component';
 
 const routes: Routes = [
   {
@@ -52,6 +55,9 @@ const routes: Routes = [
       {path:"orderconfirm", component:ConfirmRecieveComponent},
       {path:"confirmdetails", component:ConfirmRecieveDetailsComponent},
       {path:"taglist", component:TaglistComponent},
+      {path:"isuueorder", component:IssueOrderComponent},
+      {path:"addissue", component:AddissueComponent},
+      {path:"confirmissue", component:ConfirmIssueComponent},
     ]
   },
 

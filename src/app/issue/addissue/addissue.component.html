@@ -1,0 +1,70 @@
+<div class="card">
+    <div class="card-body">
+      <h4 class="mb-32">add Production Order</h4>
+      <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start" [selectedIndex]="selected.value"
+      (selectedIndexChange)="selected.setValue($event)">
+        <mat-tab label="First">
+            <mat-grid-list cols="2" rowHeight="2:1">
+                <mat-grid-tile style="overflow-y: auto; flex-wrap: wrap !important;" > 
+                    <form [formGroup]="formGroup" >
+                    
+              
+                    <mat-form-field class="w-100 fs-16" appearance="outline">
+                      <mat-label>user Id</mat-label>
+                      <input matInput  placeholder="Enter your User Id" formControlName="user_id" >
+                    </mat-form-field>
+              
+                    <mat-form-field class="w-100 fs-16" appearance="outline">
+                      <mat-label>วันที่ต้องการ</mat-label>
+                      <input matInput placeholder="Date" formControlName="iss_expected_date" [matDatepicker]="picker" (focus)="picker.open()" readonly> </mat-form-field>
+                      <mat-datepicker #picker></mat-datepicker>
+        
+              
+              
+                    <button mat-button class="btn btn-info fw-normal" (click)="submit()"  type="submit">next</button>
+                  </form></mat-grid-tile>
+        
+               
+              </mat-grid-list>
+        </mat-tab>
+        <mat-tab label="Second">
+            <mat-grid-list cols="2" rowHeight="2:1">
+                <mat-grid-tile style="overflow-y: auto; flex-wrap: wrap !important;" > 
+                    <form [formGroup]="formGroupTag" >
+                    
+              
+                    <mat-form-field class="w-100 fs-16" appearance="outline">
+                      <mat-label>ความยาวต่อม้วน</mat-label>
+                      <input matInput  placeholder="Enter your User Id" type="number" formControlName="iss_qty" >
+                    </mat-form-field>
+              
+                    <mat-form-field>
+                        <mat-label>เลือกสินค้า</mat-label>
+                        <mat-select formControlName="prod_code"   required>
+                          <mat-option>--</mat-option>
+                          @for (tag of productTag; track tag) {
+                            <mat-option [value]="tag.product_code">{{tag.prod_name}}</mat-option>
+                          }
+                        </mat-select>
+                        <!-- @if (animalControl.hasError('required')) {
+                          <mat-error>Please choose an animal</mat-error>
+                        } -->
+                        <!-- <mat-hint>{{animalControl.value?.sound}}</mat-hint> -->
+                      </mat-form-field>
+        
+              
+              
+                    <button mat-button class="btn btn-info fw-normal" (click)="submitTag()"  type="submit">submit</button>
+                  </form></mat-grid-tile>
+        
+               
+              </mat-grid-list>
+        </mat-tab>
+        <!-- <mat-tab label="Third">
+          <div class="p-20">Content 3</div>
+        </mat-tab> -->
+      </mat-tab-group>
+      
+      
+    </div>
+  </div>
