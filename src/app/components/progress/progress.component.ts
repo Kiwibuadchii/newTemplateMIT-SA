@@ -17,7 +17,7 @@ import { DemoFlexyModule } from 'src/app/demo-flexy-module';
 })
 export class ProgressComponent {
   color = 'primary';
-  mode:any = 'determinate';
+  mode: any = 'determinate';
   value = 50;
   bufferValue = 75;
 

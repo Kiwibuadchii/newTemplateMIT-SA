@@ -1,7 +1,337 @@
+<body class="row" style="background-color: white;">
+  <div>
+    <div class="filterContain">
+      <div class="filterConditionTitle" id="filterTitle">Filter Condition (3 Filter is Changed)</div>
+      <div class="arrowBtn" onclick="filterExpand(this)">
+        <div class="filterArrow"></div>
+      </div>
+      <button class="button topClearAll" onclick="clearAll()" id="filterTitleClearAll" style="display: none;">Clear
+        All</button>
+      <div class="filterConditionContent" style="">
+        <div style="width: 49%;display: inline-block;vertical-align: top;max-height: 70px;">
+          <div class="subtitle" style="display: inline-block;width: 40px;height:20px;">Div</div>
+          <div id="filter-div">
+            <div class="filter-item-frame"> <input class="divCheckBox" type="checkbox"
+                style="display: inline-block;width: 20px;height: 20px;" value="All">
+              <div style="display: inline-block">All</div>
+            </div>
+            <div class="filter-item-frame"><input class="divCheckBox" type="checkbox"
+                style="display: inline-block;width: 20px;height: 20px;" value="PX">
+              <div style="display: inline-block">Factory1</div>
+            </div>
+            <div class="filter-item-frame"><input class="divCheckBox" type="checkbox"
+                style="display: inline-block;width: 20px;height: 20px;" value="PX">
+              <div style="display: inline-block">Factory2</div>
+            </div>
+            <div class="filter-item-frame"><input class="divCheckBox" type="checkbox"
+                style="display: inline-block;width: 20px;height: 20px;" value="PX">
+              <div style="display: inline-block">Factory3</div>
+            </div>
+          </div>
+        </div>
+        <div style="width: 49%;display: inline-block;vertical-align: top;max-height: 70px;">
+          <div class="subtitle" style="display: inline-block;width: 85px;height: 20px; ">Made Area</div>
+          <div id="filter-madeArea">
+            <div class="filter-item-frame"> <input class="madeAreaCheckBox" type="checkbox"
+                style="display: inline-block;width: 20px;height: 20px;" value="All">
+              <div style="display: inline-block">All</div>
+            </div>
+            <div class="filter-item-frame"> <input class="madeAreaCheckBox" type="checkbox"
+                style="display: inline-block;width: 20px;height: 20px;" value="L4">
+              <div style="display: inline-block">L1</div>
+            </div>
+            <div class="filter-item-frame"> <input class="madeAreaCheckBox" type="checkbox"
+                style="display: inline-block;width: 20px;height: 20px;" value="L4">
+              <div style="display: inline-block">L2</div>
+            </div>
+          </div>
+        </div>
+        <div id="filter-vendor-section"
+          style="width: 49%;display: inline-block;vertical-align: top;max-height: 70px;position: relative">
+          <div class="subtitle" style="display: inline-block;width: 55px;height:20px;">Vendor</div>
+          <div id="filter-vendor">
+
+            <div class="filter-item-frame"> <input class="vendorCheckBox" type="checkbox"
+                style="display: inline-block;width: 20px;height: 20px;" value="All">
+              <div style="display: inline-block">All</div>
+            </div>
+            <div class="filter-item-frame"> <input class="vendorCheckBox" type="checkbox"
+                style="display: inline-block;width: 20px;height: 20px;" value="5FN">
+              <div style="display: inline-block">5FN</div>
+            </div>
+          </div>
+          <input id="vendorInput"
+            style="display: none;position: absolute;padding: 0px 10px;left: 60px;top: 3px;width: calc(100% - 100px);height: 18px;border-radius: 25px"
+            placeholder="Multiple items should be separated by “,” and six are the most." maxlength="23">
+        </div>
+        <div id="filter-yyyymm" style="width: 49%; display: none; vertical-align: top;">
+          <div class="filterLineSub" id="nkgYyyymmSection">
+            <div class="subtitle" id="filterYyyymm">Yyyymm</div>
+            <div class="inputContain">
+              <input type="text" id="yyyymm" data-field="yyyymm" class="field select input" placeholder="yyyymm"
+                maxlength="6" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');"
+                onkeyup="filterKeyUp(event,this)">
+            </div>
+          </div>
+        </div>
+        <div class="filterLine" style="width: 99%;float: none">
+          <div class="filterLineSub" id="nkgPoNoSection">
+            <div class="subtitle" id="filterPoNo" style="width: 70px;height:20px; ">Order No</div>
+            <div class="inputContain">
+              <input type="text" id="poNo" data-field="poNo" class="field select input"
+                onkeyup="filterKeyUp(event,this)">
+            </div>
+          </div>
+          <div class="filterLineSub" id="nkgPnSection">
+            <div class="subtitle" style="height:20px;margin-left: 5px;  " id="filterNkgPn">Issue No</div>
+            <div class="inputContain">
+              <input type="text" id="nkgPn" data-field="kinpoPnNo" class="field select input"
+                onkeyup="filterKeyUp(event,this)">
+            </div>
+          </div>
+          <div class="filterLineSub" id="nkgInvoiceNoSection" style="display: none;">
+            <div class="subtitle" id="filterInvoice">Invoice No</div>
+            <div class="inputContain">
+              <input type="text" id="invoiceNo" data-field="kinpoInvoiceNo" class="field select input"
+                onkeyup="filterKeyUp(event,this)">
+            </div>
+          </div>
+        </div>
+        <div class="filterLine" style="width: 99%;float: none" id="filterDateSection">
+          <!-- <div class="filterLineSub">
+          <div class="subtitle" style="height:20px;" id="filterDateItem">Date Item</div>
+          <div class="inputContain">
+            <div id="dateItem" class="select" style="z-index: 1;" onclick="selectClick(this, 'dateItem')">
+              <span id="dateItemSpan" data-field="dateItem" class="field" value="A">Due Dt(ETA)</span>
+              <div class="selectIcon"></div>
+            </div>
+          </div>
+        </div> -->
+          <div class="filterLineSub">
+            <div class="subtitle" style="height:20px;margin-left: 0px" id="filterDateRange">Date Range</div>
+            <div class="inputContain" style="display: inline-block;">
+              <input id="dateRangePickerStart" type="text" placeholder="yyyy/mm/dd" class="field select input"
+                style="font-size: 15px; width: 132px; cursor: pointer;" autocomplete="off">
+              <p
+                style="display: inline-block; margin: 0px 5px; height: 24px; line-height: 24px; vertical-align: bottom;">
+                ~
+              </p>
+              <input id="dateRangePickerEnd" type="text" placeholder="yyyy/mm/dd" class="field select input"
+                style="font-size: 15px; width: 132px; cursor: pointer;" autocomplete="off">
+            </div>
+          </div>
+          <div class="filterLineSub" id="filterInspMonthSection" hidden="" style="display: none;">
+            <div class="subtitle" id="filterInspMonth">Insp Month</div>
+            <div class="inputContain">
+              <div id="inspMonth" class="select" style="z-index: 1;" onclick="selectClick(this, 'inspMonth')">
+                <span id="inspMonthSpan" data-field="inspMonth" class="field" value=""></span>
+                <div class="selectIcon"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="filter-status" style="width: 49%; display: none;" hidden="">
+        </div>
+        <div class="filterLine lineHalf" style="width: auto;float: right;display: inline-block">
+          <div class="filterBtnContent">
+            <button class="button clearAll" onclick="clearAll()" id="filterClearAll">Clear All</button>
+            <button class="button query" onclick="query()" id="filterQuery">Query</button>
+            <button class="button excelDownload" onclick="excelDownload('')" id="filterExcelDownload">Excel
+              Download</button>
+            <button class="button openList" onclick="openListDialog()" id="filterOpenList" hidden=""></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tableContainer shortHeight" style="height: 562.782px;">
+      <table id="reportTable" style="min-width:100%;">
+        <thead id="table_thead">
+          <tr>
+            <th data-field="divCd" onclick="tableSort('divCd')" id="divCdTable" style="width: 52px;"><span class="asc"
+                hidden="">▲</span><span class="desc" hidden="">▼</span>Div</th>
+            <th data-field="madeArea" onclick="('madeArea')" id="madeAreaTable" style="width: 52px;"><span class="asc"
+                hidden="">▲</span><span class="desc" hidden="">▼</span>Made<br>Area</th>
+            <th data-field="vendor" onclick="tableSort('vendor')" id="vendorTable" style="width: 62px;"><span
+                class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Vendor</th>
+            <th data-field="kinpoPnNo" onclick="tableSort('partsNo')" id="partsNoTable" style="width: 100px;"><span
+                class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>PN</th>
+            <th data-field="floor" class="tableDetail hide" onclick="tableSort('floor')" id="floorTable"
+              style="width: 60px;"><span class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Floor</th>
+            <th data-field="kinpoCustNo" onclick="tableSort('custPartsNo')" id="custNoTable" style="width: 122px;"><span
+                class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>CUST PN</th>
+            <th data-field="descrp" class="tableDetail hide" onclick="tableSort('descrp')" id="descrpTable"
+              style="width: 160px;"><span class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Descrp</th>
+            <th data-field="spec" onclick="tableSort('spec')" id="specTable" style="width: 110px;"><span class="asc"
+                hidden="">▲</span><span class="desc" hidden="">▼</span>Spec</th>
+            <th data-field="rohsCode" class="tableDetail hide" onclick="tableSort('rohsCode')" id="rohsCodeTable"
+              style="width: 60px;"><span class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>RoHS</th>
+            <th data-field="prNo" onclick="tableSort('prNo')" id="prNoTable" style="width: 122px;"><span class="asc"
+                hidden="">▲</span><span class="desc" hidden="">▼</span>PO No</th>
+            <th data-field="poReleaseDate" class="tableDetail hide" onclick="tableSort('poReleaseDate')"
+              id="poReleaseDateTable" style="width: 102px;"><span class="asc" hidden="">▲</span><span class="desc"
+                hidden="">▼</span>PO Release Date</th>
+            <th data-field="kpsEtaDt" onclick="tableSort('etaDt')" id="etaDtTable" style="width: 102px;"><span
+                class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Due Date<br>(ETA)</th>
+            <th data-field="kpsEtdDt" onclick="tableSort('etdDt')" id="etdDtTable" style="width: 102px;"><span
+                class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Delivery Dt<br>(ETD)</th>
+            <th data-field="kpsPrice" onclick="tableSort('price')" id="priceTable" style="width: 82px;"><span
+                class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Price</th>
+            <th data-field="kpsCrncy" onclick="tableSort('crncy')" id="crncyTable" style="width: 52px;"><span
+                class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Crncy</th>
+            <th data-field="kpsReqQty" onclick="tableSort('reqQty')" id="reqQtyTable" style="width: 72px;"><span
+                class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Req Qty</th>
+            <th data-field="recvOkQty" onclick="tableSort('recvOkQty')" id="recvOkQtyTable" style="width: 72px;"><span
+                class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Recv Qty</th>
+            <th data-field="kpsReqQty" onclick="tableSort('acceptQty')" id="acceptQtyTable" style="width: 72px;"><span
+                class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Accept Qty</th>
+            <th data-field="openAsnQty" onclick="tableSort('onWayQty')" id="onWayQtyTable" style="width: 122px;"><span
+                class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>ASN Open Qty<br>(On Way Qty)</th>
+            <th data-field="kpsReqQty" onclick="tableSort('balanceQty')" id="balanceQtyTable" style="width: 72px;"><span
+                class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Balance Qty</th>
+            <th data-field="jitCd" class="tableDetail hide" onclick="tableSort('jitCd')" id="jitCdTable"
+              style="width: 60px;"><span class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Big Matl
+            </th>
+            <th data-field="noDtsCd" class="tableDetail hide" onclick="tableSort('noDtsCd')" id="noDtsCdTable"
+              style="width: 65px;"><span class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>No Dts Cd
+            </th>
+            <th data-field="manuf" class="tableDetail hide" onclick="tableSort('manuf')" id="manufactureTable"
+              style="width: 102px;text-align: center;"><span class="asc" hidden="">▲</span><span class="desc"
+                hidden="">▼</span>Manuf</th>
+            <th data-field="manufPn" class="tableDetail hide" onclick="tableSort('manufPn')" id="manufPnTable"
+              style="width: 102px;"><span class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Manuf PN
+            </th>
+            <th data-field="purCode" class="tableDetail hide" onclick="tableSort('purchaser')" id="purchaserTable"
+              style="width: 72px;"><span class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Buyer</th>
+          </tr>
+        </thead>
+        <tbody id="table_tbody">
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <body>
+
+  <h2>My Customers</h2>
+
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+  <table id="myTable">
+    <tr class="header">
+      <th style="width:60%;">Name</th>
+      <th style="width:40%;">Country</th>
+    </tr>
+    <tr>
+      <td>Alfreds Futterkiste</td>
+      <td>Germany</td>
+    </tr>
+    <tr>
+      <td>Berglunds snabbkop</td>
+      <td>Sweden</td>
+    </tr>
+    <tr>
+      <td>Island Trading</td>
+      <td>UK</td>
+    </tr>
+    <tr>
+      <td>Koniglich Essen</td>
+      <td>Germany</td>
+    </tr>
+    <tr>
+      <td>Laughing Bacchus Winecellars</td>
+      <td>Canada</td>
+    </tr>
+    <tr>
+      <td>Magazzini Alimentari Riuniti</td>
+      <td>Italy</td>
+    </tr>
+    <tr>
+      <td>North/South</td>
+      <td>UK</td>
+    </tr>
+    <tr>
+      <td>Paris specialites</td>
+      <td>France</td>
+    </tr>
+  </table>
+
+  <script>
+    function myFunction() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
+
+</body> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- ============================================================== -->
 <!-- Fixed height Card Grid-->
 <!-- ============================================================== -->
-<div class="row">
+<!-- <div class="row">
   <div class="col-12">
     <mat-card>
       <mat-card-content>
@@ -13,10 +343,10 @@
     </mat-card>
   </div>
 </div>
-<!-- ============================================================== -->
+============================================================== -->
 <!-- Fixed height Card Grid-->
 <!-- ============================================================== -->
-<div class="row">
+<!-- <div class="row">
   <div class="col-12">
     <mat-card>
       <mat-card-content>
@@ -27,11 +357,11 @@
       </mat-card-content>
     </mat-card>
   </div>
-</div>
+</div> -->
 <!-- ============================================================== -->
 <!-- Fixed height Card Grid-->
 <!-- ============================================================== -->
-<div class="row">
+<!-- <div class="row">
   <div class="col-12">
     <mat-card>
       <mat-card-content>
@@ -42,11 +372,11 @@
       </mat-card-content>
     </mat-card>
   </div>
-</div>
+</div> -->
 <!-- ============================================================== -->
 <!-- Fixed height Card Grid-->
 <!-- ============================================================== -->
-<div class="row">
+<!-- <div class="row">
   <div class="col-12">
     <mat-card>
       <mat-card-content>
@@ -58,10 +388,10 @@
     </mat-card>
   </div>
 </div>
-<!-- ============================================================== -->
+ ============================================================== -->
 <!-- Fixed height Card Grid-->
 <!-- ============================================================== -->
-<div class="row">
+<!-- <div class="row">
   <div class="col-12">
     <mat-card>
       <mat-card-content>
@@ -74,16 +404,16 @@
       </mat-card-content>
     </mat-card>
   </div>
-</div>
+</div> -->
 <!-- ============================================================== -->
 <!-- Fixed height Card Grid-->
 <!-- ============================================================== -->
-<div class="row">
+<!-- <div class="row">
   <div class="col-12">
     <mat-card class="example-card">
       <mat-card-content>
         <h2 class="example-h2">Progress bar configuration</h2>
-    
+
         <section class="example-section">
           <label class="example-margin">Color:</label>
           <mat-radio-group [(ngModel)]="color">
@@ -98,7 +428,7 @@
             </mat-radio-button>
           </mat-radio-group>
         </section>
-    
+
         <section class="example-section">
           <label class="example-margin">Mode:</label>
           <mat-radio-group [(ngModel)]="mode">
@@ -116,7 +446,7 @@
             </mat-radio-button>
           </mat-radio-group>
         </section>
-    
+
         <section class="example-section" *ngIf="mode === 'determinate' || mode === 'buffer'">
           <label class="example-margin">Progress:</label>
           <mat-slider class="example-margin">
@@ -131,22 +461,18 @@
         </section>
       </mat-card-content>
     </mat-card>
-    
+
     <mat-card class="example-card">
       <mat-card-content>
         <h2 class="example-h2">Result</h2>
-    
+
         <section class="example-section">
-          <mat-progress-bar
-              class="example-margin"
-              [color]="color"
-              [mode]="mode"
-              [value]="value"
-              [bufferValue]="bufferValue">
+          <mat-progress-bar class="example-margin" [color]="color" [mode]="mode" [value]="value"
+            [bufferValue]="bufferValue">
           </mat-progress-bar>
         </section>
       </mat-card-content>
     </mat-card>
-    
+
   </div>
-</div>
+</div> -->
