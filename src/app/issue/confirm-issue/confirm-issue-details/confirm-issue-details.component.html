@@ -1,24 +1,31 @@
 <h2 mat-dialog-title> {{data.name}}</h2>
 <mat-dialog-content style="padding-top: 15px;">
-    
-    <form [formGroup]="formTagIssue" >
+  
+
+
+    <ngx-scanner-qrcode #action="scanner" [config]="config" (event)="onEvent($event, action)"></ngx-scanner-qrcode>
+    <button class="btn" [class.btn-info]="!action.isStart" [class.btn-warning]="action.isStart" [disabled]="action.isLoading" (click)="handle(action, action.isStart ? 'stop' : 'start')">
+      <img [src]="action.isStart ? 'https://id1945.github.io/images/svg/camera-off.svg' : 'https://id1945.github.io/images/svg/camera-on.svg'" width="30px"/>
+      <!-- <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIQAAACECAYAAABRRIOnAAAAAklEQVR4AewaftIAAAOCSURBVO3BQY7kSAIDQWcg//9l3z7MgScBgpQ1XbM0i38w84/DTDnMlMNMOcyUw0w5zJTDTDnMlMNMOcyUw0w5zJTDTDnMlMNM+fBQEn6SSkvCm1RaEu5QaUn4SSpPHGbKYaYcZsqHl6m8KQlPqFxJwhWVN6m8KQlvOsyUw0w5zJQPX5aEO1SeULlD5Y4kXFG5Iwl3qHzTYaYcZsphpnz45VSuJOGKyh0qLQn/JYeZcpgph5ny4ZdLQlNpKk8koan8lx1mymGmHGbKhy9T+SaVloSm0pJwRaWpfJPK3+QwUw4z5TBTPrwsCT8pCU2lJaGptCRcSUJTeSIJf7PDTDnMlMNM+fCQyr9J5U1JaCotCU3lispvcpgph5lymCkfHkpCU7mShJ+k8k1JuKJyJQlNpSXhDpUnDjPlMFMOM+XDlyWhqbQkXFH5JpWWhCdUWhLuSMIVlW86zJTDTDnMlA8vS0JTuaJyJQl3qLQk/KQkXFFpSWgqdyShqTxxmCmHmXKYKR8eUmlJuJKEptKS0FRaEq4k4SeptCQ0lSsqLQl3qLzpMFMOM+UwUz48lIQ7VFoSriThDpWWhDep3JGEptKScEXlShKayhOHmXKYKYeZ8uFlKi0Jd6hcSUJTuUPlShJaEu5QuZKEKypXktBU3nSYKYeZcpgpH16WhCeS8EQSriThDpUrSWhJeFMSmkpLQlN54jBTDjPlMFM+vEylJaGptCRcUWlJaEm4otKS0FTuSMIVlTuS0JJwh8qbDjPlMFMOM+XDl6m0JDSVK0loKi0JTaUloanckYQ7kvCTktBUnjjMlMNMOcyU+Ae/WBJ+kkpLQlO5IwlNpSWhqXzTYaYcZsphpnx4KAk/SeWKypUkNJVvSkJTeSIJV1SeOMyUw0w5zJQPL1N5UxKeSEJTaUloKi0JT6jckYSmciUJbzrMlMNMOcyUD1+WhDtU3qRyRxKeSMJPUnnTYaYcZsphpnz4P6dyJQlXVFoSrqjckYSm0pLQVJ44zJTDTDnMlA+/nEpLwhWVloSmckWlJaGpXEnCFZWm0pLwTYeZcpgph5ny4ctU/mYqb0rCFZWWhJaEf9NhphxmymGmfHhZEn5SEq6o3JGEK0loKnck4Q6VK0l402GmHGbKYabEP5j5x2GmHGbKYaYcZsphphxmymGmHGbKYaYcZsphphxmymGmHGbKYab8D0WmdTNEy4pDAAAAAElFTkSuQmCC" alt=""> -->
+    </button>
+
+
+    <form [formGroup]="formTagIssue"  >
                     
               
         <mat-form-field class="w-100 fs-16" appearance="outline">
           <mat-label>ความยาวต่อม้วน</mat-label>
           <input matInput  placeholder="Enter your User Id" type="number" formControlName="iss_qty" >
         </mat-form-field>
-        <mat-form-field class="w-100 fs-16" appearance="outline">
+        <!-- <mat-form-field class="w-100 fs-16" appearance="outline">
           <mat-label>รหัสสินค้า</mat-label>
           <input matInput  placeholder="Enter your User Id"  formControlName="prod_code" >
-        </mat-form-field>
+        </mat-form-field> -->
         
-  
-
-  
-  
       </form>
+ 
+      
 </mat-dialog-content>
 <mat-dialog-actions>
-  <button mat-button  cdkFocusInitial>อนุมัติเบิกจ่าย</button>
+  <button mat-button (click)="submit()" cdkFocusInitial>อนุมัติเบิกจ่าย</button>
 </mat-dialog-actions>

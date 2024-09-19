@@ -52,5 +52,12 @@ export class IssueOrderService {
       })
     );
   }
+  AcceptIssue(data:any){
+    return this.http.post<any>(environment.API+ `/issue`,data).pipe(
+      map((res:any)=>{
+        return res;
+      })
+    )
+  }
 
 }
