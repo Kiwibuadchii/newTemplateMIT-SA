@@ -81,7 +81,7 @@ tabs = ['First', 'Second', 'Third'];
       next:(res:any)=> {
         this.selected.setValue(1)
         this.formGroupTag.patchValue({
-          re_order_id:res.id
+          re_order_id:res._id
         })
       },
       error:(err:any)=> {

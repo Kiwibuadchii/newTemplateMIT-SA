@@ -23,7 +23,7 @@ import { ConfirmRecieveDetailsComponent } from './confirm-recieve-details/confir
 })
 export class ConfirmRecieveComponent {
 
-  displayedColumns: string[] = ['id', 'assigned', 'budget','button'];
+  displayedColumns: string[] = ['id', 'assigned', 'budget','work','user','button'];
   dataSource:any = []
   readonly dialog = inject(MatDialog);
   constructor(

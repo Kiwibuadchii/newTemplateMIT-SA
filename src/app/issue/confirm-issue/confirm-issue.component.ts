@@ -23,7 +23,7 @@ import { ConfirmIssueDetailsComponent } from './confirm-issue-details/confirm-is
 })
 export class ConfirmIssueComponent {
 
-  displayedColumns: string[] = ['id', 'assigned', 'budget','button'];
+  displayedColumns: string[] = ['id', 'assigned', 'budget','iss','button'];
   dataSource:any = []
   readonly dialog = inject(MatDialog);
   constructor(
@@ -41,6 +41,8 @@ export class ConfirmIssueComponent {
   Table(){
     this.issueService.getConfirm_OrdersIssue().subscribe((res:any)=>{
       this.dataSource = res;
+      console.log(this.dataSource,"dataSource: ");
+      
     });
   }
   openDialog(id:any) {

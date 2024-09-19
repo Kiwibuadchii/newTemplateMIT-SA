@@ -18,7 +18,7 @@ import { DemoFlexyModule } from 'src/app/demo-flexy-module';
 })
 export class IssueOrderComponent {
 
-  displayedColumns: string[] = ['id', 'assigned', 'budget','button'];
+  displayedColumns: string[] = ['id', 'assigned', 'budget'];
   dataSource:any = []
 
   constructor(
