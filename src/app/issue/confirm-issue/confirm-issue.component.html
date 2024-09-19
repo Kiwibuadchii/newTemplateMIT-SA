@@ -1,5 +1,5 @@
 <mat-card class="w-100">
-    <mat-card-content>
+    <mat-card-content style="overflow-x: auto;" >
         <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
 
             <h4 class="mb-56">Order from Sale</h4>
@@ -52,7 +52,7 @@
            <ng-container matColumnDef="button">
             <th mat-header-cell *matHeaderCellDef> เพิ่มเติม </th>
             <td mat-cell *matCellDef="let element">
-                <button  mat-raised-button class="me-8 mb-8" (click)="openDialog(element._id)" color="primary">สแกนเบิกจ่าย</button>
+                <button  mat-raised-button class="me-8 mb-8" (click)="openDialog(element._id)" color="primary">เบิกจ่าย</button>
             </td>
           </ng-container>
   
