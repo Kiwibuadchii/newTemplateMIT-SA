@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 export interface PeriodicElement {
-  Order_No: number;
+  Order_No: string;
   name: string;
   work: string;
   project: string;
@@ -11,11 +11,11 @@ export interface PeriodicElement {
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  { Order_No: 1, name: 'Deep Javiya', work: 'Frontend Devloper', project: 'Flexy Angular', priority: 'Low', badge: 'badge-info', budget: '$3.9k' },
-  { Order_No: 2, name: 'Nirav Joshi', work: 'Project Manager', project: 'Hosting Press HTML', priority: 'Medium', badge: 'badge-primary', budget: '$24.5k' },
-  { Order_No: 3, name: 'Sunil Joshi', work: 'Web Designer', project: 'Elite Admin', priority: 'High', badge: 'badge-danger', budget: '$12.8k' },
-  { Order_No: 4, name: 'Maruti Makwana', work: 'Backend Devloper', project: 'Material Pro', priority: 'Critical', badge: 'badge-success', budget: '$2.4k' },
-  { Order_No: 5, name: 'Maruti Makwana', work: 'Backend Devloper', project: 'Material Pro', priority: 'Critical', badge: 'badge-success', budget: '$2.4k' },
+  { Order_No: "J001", name: 'Cotton', work: 'D012', project: 'Factory01', priority: 'Waiting', badge: 'badge-primary', budget: '30 SEP 24' },
+  { Order_No: "J002", name: 'Silk', work: 'D003', project: 'Factory01', priority: 'Waiting', badge: 'badge-primary', budget: '28 SEP 24' },
+  { Order_No: "J003", name: 'Linen', work: 'D007', project: 'Factory04', priority: 'Urgent', badge: 'badge-danger', budget: '19 SEP 24' },
+  { Order_No: "J004", name: 'Wool', work: 'D010', project: 'Factory03', priority: 'Reveived', badge: 'badge-success', budget: '17 SEP 24' },
+  { Order_No: "J005", name: 'Polyester', work: 'D005', project: 'Factory02', priority: 'Reveived', badge: 'badge-success', budget: '13 SEP 24' },
 ];
 
 
