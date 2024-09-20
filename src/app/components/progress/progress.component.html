@@ -1,7 +1,7 @@
 <body class="row" style="background-color: white;">
   <div>
     <div class="filterContain">
-      <div class="filterConditionTitle" id="filterTitle">Filter Condition (3 Filter is Changed)</div>
+      <div class="filterConditionTitle" id="filterTitle">Filter Condition</div>
       <div class="arrowBtn" onclick="filterExpand(this)">
         <div class="filterArrow"></div>
       </div>
@@ -149,60 +149,32 @@
         <thead id="table_thead">
           <tr>
             <th data-field="divCd" onclick="tableSort('divCd')" id="divCdTable" style="width: 52px;"><span class="asc"
-                hidden="">▲</span><span class="desc" hidden="">▼</span>Div</th>
-            <th data-field="madeArea" onclick="('madeArea')" id="madeAreaTable" style="width: 52px;"><span class="asc"
-                hidden="">▲</span><span class="desc" hidden="">▼</span>Made<br>Area</th>
-            <th data-field="vendor" onclick="tableSort('vendor')" id="vendorTable" style="width: 62px;"><span
-                class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Vendor</th>
-            <th data-field="kinpoPnNo" onclick="tableSort('partsNo')" id="partsNoTable" style="width: 100px;"><span
-                class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>PN</th>
+                hidden="">▲</span><span class="desc" hidden="">▼</span>No.</th>
+            <th data-field="madeArea" onclick="('madeArea')" id="madeAreaTable" style="width: 90px;"><span class="asc"
+                hidden="">▲</span><span class="desc" hidden="">▼</span>Item ID</th>
+            <th data-field="vendor" onclick="tableSort('vendor')" id="vendorTable" style="width: 500px;"><span
+                class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Descripstion</th>
+            <th data-field="kinpoPnNo" onclick="tableSort('partsNo')" id="partsNoTable" style="width: 70px;"><span
+                class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Qty</th>
             <th data-field="floor" class="tableDetail hide" onclick="tableSort('floor')" id="floorTable"
-              style="width: 60px;"><span class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Floor</th>
+              style="width: 150px;"><span class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Location
+            </th>
             <th data-field="kinpoCustNo" onclick="tableSort('custPartsNo')" id="custNoTable" style="width: 122px;"><span
-                class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>CUST PN</th>
+                class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Lot No.</th>
             <th data-field="descrp" class="tableDetail hide" onclick="tableSort('descrp')" id="descrpTable"
-              style="width: 160px;"><span class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Descrp</th>
+              style="width: 160px;"><span class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Delivery
+              Date</th>
             <th data-field="spec" onclick="tableSort('spec')" id="specTable" style="width: 110px;"><span class="asc"
-                hidden="">▲</span><span class="desc" hidden="">▼</span>Spec</th>
-            <th data-field="rohsCode" class="tableDetail hide" onclick="tableSort('rohsCode')" id="rohsCodeTable"
-              style="width: 60px;"><span class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>RoHS</th>
+                hidden="">▲</span><span class="desc" hidden="">▼</span>Issue Date</th>
             <th data-field="prNo" onclick="tableSort('prNo')" id="prNoTable" style="width: 122px;"><span class="asc"
-                hidden="">▲</span><span class="desc" hidden="">▼</span>PO No</th>
+                hidden="">▲</span><span class="desc" hidden="">▼</span>Order No</th>
             <th data-field="poReleaseDate" class="tableDetail hide" onclick="tableSort('poReleaseDate')"
               id="poReleaseDateTable" style="width: 102px;"><span class="asc" hidden="">▲</span><span class="desc"
-                hidden="">▼</span>PO Release Date</th>
-            <th data-field="kpsEtaDt" onclick="tableSort('etaDt')" id="etaDtTable" style="width: 102px;"><span
-                class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Due Date<br>(ETA)</th>
-            <th data-field="kpsEtdDt" onclick="tableSort('etdDt')" id="etdDtTable" style="width: 102px;"><span
-                class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Delivery Dt<br>(ETD)</th>
-            <th data-field="kpsPrice" onclick="tableSort('price')" id="priceTable" style="width: 82px;"><span
-                class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Price</th>
-            <th data-field="kpsCrncy" onclick="tableSort('crncy')" id="crncyTable" style="width: 52px;"><span
-                class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Crncy</th>
-            <th data-field="kpsReqQty" onclick="tableSort('reqQty')" id="reqQtyTable" style="width: 72px;"><span
-                class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Req Qty</th>
-            <th data-field="recvOkQty" onclick="tableSort('recvOkQty')" id="recvOkQtyTable" style="width: 72px;"><span
-                class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Recv Qty</th>
-            <th data-field="kpsReqQty" onclick="tableSort('acceptQty')" id="acceptQtyTable" style="width: 72px;"><span
-                class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Accept Qty</th>
-            <th data-field="openAsnQty" onclick="tableSort('onWayQty')" id="onWayQtyTable" style="width: 122px;"><span
-                class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>ASN Open Qty<br>(On Way Qty)</th>
-            <th data-field="kpsReqQty" onclick="tableSort('balanceQty')" id="balanceQtyTable" style="width: 72px;"><span
-                class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Balance Qty</th>
-            <th data-field="jitCd" class="tableDetail hide" onclick="tableSort('jitCd')" id="jitCdTable"
-              style="width: 60px;"><span class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Big Matl
-            </th>
-            <th data-field="noDtsCd" class="tableDetail hide" onclick="tableSort('noDtsCd')" id="noDtsCdTable"
-              style="width: 65px;"><span class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>No Dts Cd
-            </th>
-            <th data-field="manuf" class="tableDetail hide" onclick="tableSort('manuf')" id="manufactureTable"
-              style="width: 102px;text-align: center;"><span class="asc" hidden="">▲</span><span class="desc"
-                hidden="">▼</span>Manuf</th>
-            <th data-field="manufPn" class="tableDetail hide" onclick="tableSort('manufPn')" id="manufPnTable"
-              style="width: 102px;"><span class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Manuf PN
-            </th>
+                hidden="">▼</span>Issue No.</th>
+
             <th data-field="purCode" class="tableDetail hide" onclick="tableSort('purchaser')" id="purchaserTable"
-              style="width: 72px;"><span class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Buyer</th>
+              style="width: 72px;"><span class="asc" hidden="">▲</span><span class="desc" hidden="">▼</span>Supplier
+            </th>
           </tr>
         </thead>
         <tbody id="table_tbody">
