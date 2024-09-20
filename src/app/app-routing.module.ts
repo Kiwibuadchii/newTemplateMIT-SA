@@ -26,9 +26,11 @@ import { TaglistComponent } from './tagDetails/taglist/taglist.component';
 import { IssueOrderComponent } from './issue/issue-order/issue-order.component';
 import { AddissueComponent } from './issue/addissue/addissue.component';
 import { ConfirmIssueComponent } from './issue/confirm-issue/confirm-issue.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
+
     path:"",
     component:FullComponent,
     children: [
@@ -58,8 +60,9 @@ const routes: Routes = [
       {path:"isuueorder", component:IssueOrderComponent},
       {path:"addissue", component:AddissueComponent},
       {path:"confirmissue", component:ConfirmIssueComponent},
-    ]
+    ],
   },
+  {path:"login", component:LoginComponent,},
 
   {path:"", redirectTo:"/home", pathMatch:"full"},
   {path:"**", redirectTo:"/home", pathMatch:"full"},
