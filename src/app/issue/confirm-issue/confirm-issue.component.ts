@@ -47,8 +47,8 @@ export class ConfirmIssueComponent {
   }
   openDialog(id:any) {
     const dialogRef = this.dialog.open(ConfirmIssueDetailsComponent, {
-      height: '400px',
-      width: '600px',
+      height: '800px',
+      width: '1000px',
       data:{name:'อนุมัติเบิกจ่าย',id:id}
     });
 

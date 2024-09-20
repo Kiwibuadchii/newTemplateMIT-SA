@@ -41,27 +41,27 @@ export class FullComponent {
     {
       link: "/orderlist",
       icon: "home",
-      menu: "order",
+      menu: "Create Order",
     },
     {
       link: "/orderconfirm",
       icon: "home",
-      menu: "confirm order",
+      menu: "Receive Order",
     },
     {
       link: "/taglist",
       icon: "home",
-      menu: "tag list",
+      menu: "Received Tags",
     },
     {
       link: "/isuueorder",
       icon: "home",
-      menu: "production order",
+      menu: "Create Issue Order",
     },
     {
       link: "/confirmissue",
       icon: "home",
-      menu: "confirm production order",
+      menu: "Issue Order",
     },
     // {
     //   link: "/button",

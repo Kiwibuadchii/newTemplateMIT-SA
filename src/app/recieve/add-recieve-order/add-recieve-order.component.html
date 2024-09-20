@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-body" style="background-color: white;" >
-      <h4 class="mb-32">add Order</h4>
+      <h4 class="mb-32">Create Order</h4>
       <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start" [selectedIndex]="selected.value"
       (selectedIndexChange)="selected.setValue($event)">
         <mat-tab label="First">
@@ -33,10 +33,7 @@
                     <form [formGroup]="formGroupTag" >
                     
               
-                    <mat-form-field class="w-100 fs-16" appearance="outline">
-                      <mat-label>ความยาวต่อม้วน</mat-label>
-                      <input matInput  placeholder="Enter your User Id" type="number" formControlName="qty_per_tag" >
-                    </mat-form-field>
+                 
               
                     <mat-form-field>
                         <mat-label>เลือกสินค้า</mat-label>
@@ -50,6 +47,10 @@
                           <mat-error>Please choose an animal</mat-error>
                         } -->
                         <!-- <mat-hint>{{animalControl.value?.sound}}</mat-hint> -->
+                      </mat-form-field>
+                      <mat-form-field class="w-100 fs-16" appearance="outline">
+                        <mat-label>ความยาวต่อม้วน</mat-label>
+                        <input matInput  placeholder="Enter your User Id" type="number" formControlName="qty_per_tag" >
                       </mat-form-field>
         
               
