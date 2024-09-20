@@ -40,27 +40,27 @@ export class FullComponent {
     },
     {
       link: "/orderlist",
-      icon: "home",
+      icon: "file-plus",
       menu: "Create Order",
     },
     {
       link: "/orderconfirm",
-      icon: "home",
+      icon: "Inbox",
       menu: "Receive Order",
     },
     {
       link: "/taglist",
-      icon: "home",
+      icon: "Database",
       menu: "Received Tags",
     },
     {
       link: "/isuueorder",
-      icon: "home",
+      icon: "file-plus",
       menu: "Create Issue Order",
     },
     {
       link: "/confirmissue",
-      icon: "home",
+      icon: "File-Minus",
       menu: "Issue Order",
     },
     // {
