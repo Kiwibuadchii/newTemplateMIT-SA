@@ -27,6 +27,10 @@ import { IssueOrderComponent } from './issue/issue-order/issue-order.component';
 import { AddissueComponent } from './issue/addissue/addissue.component';
 import { ConfirmIssueComponent } from './issue/confirm-issue/confirm-issue.component';
 import { LoginComponent } from './login/login.component';
+import { UserAdminComponent } from './user-admin/user-admin.component';
+import { AddUserComponent } from './user-admin/add-user/add-user.component';
+import { ProductItemsComponent } from './product-items/product-items.component';
+import { AddProductComponent } from './product-items/add-product/add-product.component';
 
 const routes: Routes = [
   {
@@ -60,6 +64,10 @@ const routes: Routes = [
       {path:"isuueorder", component:IssueOrderComponent},
       {path:"addissue", component:AddissueComponent},
       {path:"confirmissue", component:ConfirmIssueComponent},
+      {path:"user", component:UserAdminComponent},
+      {path:"add-user", component:AddUserComponent},
+      {path:"product", component:ProductItemsComponent},
+      {path:"add-product", component:AddProductComponent},
     ],
   },
   {path:"login", component:LoginComponent,},

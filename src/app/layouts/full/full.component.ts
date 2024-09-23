@@ -39,6 +39,16 @@ export class FullComponent {
       menu: "Dashboard",
     },
     {
+      link: "/user",
+      icon: "user",
+      menu: "User",
+    },
+    {
+      link: "/product",
+      icon: "box",
+      menu: "Product",
+    },
+    {
       link: "/orderlist",
       icon: "file-plus",
       menu: "Create Order",

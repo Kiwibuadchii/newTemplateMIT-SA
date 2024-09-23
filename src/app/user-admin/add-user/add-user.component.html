@@ -1,0 +1,64 @@
+<div class="card">
+    <div class="card-body" style="background-color: white;" >
+      <h4 class="mb-32">Create User</h4>
+     
+       
+            <mat-grid-list cols="2" rowHeight="3:2" [formGroup]="formGroup" >
+                <mat-grid-tile style="overflow-y: auto; flex-wrap: wrap !important;" > 
+                    <form style="padding:70px ;" >
+                    
+              
+                    <mat-form-field class="w-100 fs-16" appearance="outline">
+                      <mat-label>user Id</mat-label>
+                      <input matInput  placeholder="Enter your User Id" formControlName="user_id" >
+                    </mat-form-field>
+              
+                    <mat-form-field class="w-100 fs-16" appearance="outline">
+                      <mat-label>Password</mat-label>
+                      <input matInput  placeholder="Enter your User Password" formControlName="user_password" >
+                    </mat-form-field>
+                    <mat-form-field class="w-100 fs-16" appearance="outline">
+                      <mat-label>ตำแหน่ง</mat-label>
+                      <input matInput  placeholder="Enter your Position" formControlName="user_dept" >
+                    </mat-form-field>
+        
+              
+              
+                  </form></mat-grid-tile>
+                <mat-grid-tile style="overflow-y: auto; flex-wrap: wrap !important;  " > 
+                    <form style="padding:70px ;" >
+                    
+              
+                    <mat-form-field class="w-100 fs-16" appearance="outline">
+                      <mat-label>ชื่อ</mat-label>
+                      <input matInput  placeholder="Enter your first name" formControlName="user_fname" >
+                    </mat-form-field>
+              
+                    <mat-form-field class="w-100 fs-16" appearance="outline">
+                      <mat-label>นามสกุล</mat-label>
+                      <input matInput  placeholder="Enter your last name" formControlName="user_lname" >
+                    </mat-form-field>
+                    <mat-form-field class="w-100 fs-16" appearance="outline">
+                      <mat-label>email</mat-label>
+                      <input matInput  placeholder="Enter your last name" formControlName="user_email" >
+                    </mat-form-field>
+
+                    </form>
+                </mat-grid-tile>
+           
+                
+                
+            </mat-grid-list>
+            <button mat-raised-button class="me-8 mb-8" style="width: 7%;
+            position: relative;
+            left: 69vw;" color="primary" (click)="submit()"  type="submit">next</button>
+   
+        
+        <!-- <mat-tab label="Third">
+          <div class="p-20">Content 3</div>
+        </mat-tab> -->
+ 
+      
+      
+    </div>
+  </div>

@@ -1,0 +1,45 @@
+<div class="card">
+    <div class="card-body" style="background-color: white;" >
+      <h4 class="mb-32">Create Product</h4>
+     
+       
+            <mat-grid-list cols="2" rowHeight="2:1" [formGroup]="formGroup" >
+                <mat-grid-tile style="overflow-y: auto; flex-wrap: wrap !important;" > 
+                    <form style="padding:70px ;" >
+                    
+              
+                    <mat-form-field class="w-100 fs-16" appearance="outline">
+                      <mat-label>ชื่อสินค้า</mat-label>
+                      <input matInput  placeholder="Enter your User Id" formControlName="prod_name" >
+                    </mat-form-field>
+              
+                    <mat-form-field class="w-100 fs-16" appearance="outline">
+                      <mat-label>สถานที่เก็บ</mat-label>
+                      <input matInput  placeholder="Enter your User Password" formControlName="location_id" >
+                    </mat-form-field>
+                    <mat-form-field class="w-100 fs-16" appearance="outline">
+                      <mat-label>ผู้จำหน่าย</mat-label>
+                      <input matInput  placeholder="Enter your Position" formControlName="suppllier_name" >
+                    </mat-form-field>
+        
+              
+              
+                  </form></mat-grid-tile>
+              
+           
+                
+                
+            </mat-grid-list>
+            <button mat-raised-button class="me-8 mb-8" style="width: 7%;
+            position: relative;
+            left: 69vw;" color="primary" (click)="submit()"  type="submit">next</button>
+   
+        
+        <!-- <mat-tab label="Third">
+          <div class="p-20">Content 3</div>
+        </mat-tab> -->
+ 
+      
+      
+    </div>
+  </div>
